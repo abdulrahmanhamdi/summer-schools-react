@@ -1,8 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import logo from "../assets/img/logo.png";
 
 function Sidebar() {
+  const location = useLocation();
+
   const closeSidebarOnClick = () => {
     if (window.innerWidth <= 768) {
       document.getElementById("sidebar")?.classList.remove("active");
@@ -13,6 +15,9 @@ function Sidebar() {
       }, 300);
     }
   };
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const isOnHome = location.pathname === "/";
 
   return (
     <>
@@ -30,18 +35,52 @@ function Sidebar() {
           <NavLink to="/" className="nav-link" onClick={closeSidebarOnClick}>
             <i className="bi bi-house-door-fill me-2"></i> Ana Sayfa
           </NavLink>
-          <a href="#universiteler" className="nav-link" onClick={closeSidebarOnClick}>
+
+          {isOnHome && (
+            <>
+              <a href="#tavsiyeler" className="nav-link" onClick={closeSidebarOnClick}>
+                <i className="bi bi-lightbulb me-2"></i> Tavsiyeler
+              </a>
+              <a href="#hakkimizda" className="nav-link" onClick={closeSidebarOnClick}>
+                <i className="bi bi-person-badge me-2"></i> Hakkımızda
+              </a>
+              <a href="#sss" className="nav-link" onClick={closeSidebarOnClick}>
+                <i className="bi bi-question-circle-fill me-2"></i> SSS
+              </a>
+            </>
+          )}
+
+          <NavLink to="/universiteler" className="nav-link" onClick={closeSidebarOnClick}>
             <i className="bi bi-building me-2"></i> Üniversiteler
-          </a>
+          </NavLink>
+
           <NavLink to="/contact" className="nav-link" onClick={closeSidebarOnClick}>
             <i className="bi bi-envelope-fill me-2"></i> İletişim
           </NavLink>
-          <NavLink to="/about" className="nav-link" onClick={closeSidebarOnClick}>
-            <i className="bi bi-info-circle-fill me-2"></i> Hakkında
-          </NavLink>
+
+          {/* 🔵 Giriş Yap - فقط إذا لم يكن مسجلًا */}
+          {!isLoggedIn && (
+            <NavLink to="/login" className="nav-link" onClick={closeSidebarOnClick}>
+              <i className="bi bi-box-arrow-in-right me-2"></i> Giriş Yap
+            </NavLink>
+          )}
+
+          {/* 🔴 Çıkış Yap - فقط إذا كان مسجلًا */}
+          {isLoggedIn && (
+            <>
+              <hr />
+              <button
+                onClick={() => {
+                  localStorage.removeItem("isLoggedIn");
+                  window.location.href = "/login";
+                }}
+                className="btn btn-outline-danger mt-2"
+              >
+                <i className="bi bi-box-arrow-right me-2"></i> Çıkış Yap
+              </button>
+            </>
+          )}
         </nav>
-
-
       </div>
     </>
   );

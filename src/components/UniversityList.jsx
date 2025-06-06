@@ -1,18 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { universityData } from "../data/universities";
 
 function UniversityList() {
+  const [universities, setUniversities] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [typeFilter, setTypeFilter] = useState("");
   const [statusFilter, setStatusFilter] = useState("");
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/api/universities");
+        const data = await res.json();
+        setUniversities(Object.values(data));
+      } catch (error) {
+        console.error("Üniversiteler alınamadı:", error);
+      }
+    };
 
-  const universities = Object.entries(universityData).map(([id, uni]) => ({
-    id,
-    ...uni,
-  }));
-
+    fetchData();
+  }, []);
 
   const filtered = universities.filter((uni) => {
     const nameMatch = uni.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -83,9 +90,7 @@ function UniversityList() {
                 <td>
                   <span
                     className={`badge ${
-                      uni.type === "Devlet"
-                        ? "bg-success"
-                        : "bg-info text-dark"
+                      uni.type === "Devlet" ? "bg-success" : "bg-info text-dark"
                     }`}
                   >
                     {uni.type}

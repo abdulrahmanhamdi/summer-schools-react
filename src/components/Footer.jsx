@@ -17,7 +17,7 @@ function Footer() {
             <h6 className="fw-bold text-custom mb-3">Hızlı Erişim</h6>
             <ul className="list-unstyled">
               <li><a href="/" className="footer-link">Ana Sayfa</a></li>
-              <li><a href="#universiteler" className="footer-link">Üniversiteler</a></li>
+              <li><a href="/universiteler" className="footer-link">Üniversiteler</a></li>
               <li><a href="/contact" className="footer-link">İletişim</a></li>
               <li><a href="/about" className="footer-link">Hakkında</a></li>
             </ul>

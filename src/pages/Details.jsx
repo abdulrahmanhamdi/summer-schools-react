@@ -3,15 +3,31 @@ import { useParams } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
-import { universityData } from "../data/universities";
 
 function Details() {
-  const { uni } = useParams();
-  const data = universityData[uni];
+  const { uni } = useParams(); // "uni" = id
   const detailRef = useRef(null);
+
+  const [data, setData] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [matches, setMatches] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // ✅ جلب البيانات من الباكيند
+  useEffect(() => {
+    const fetchUni = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/api/universities");
+        const result = await res.json();
+        const uniData = result[uni]; // data is object
+        setData(uniData);
+      } catch (err) {
+        console.error("Detay alınamadı", err);
+      }
+    };
+
+    fetchUni();
+  }, [uni]);
 
   // 🔍 بحث داخل النص + تمييز
   useEffect(() => {
@@ -77,7 +93,7 @@ function Details() {
             {/* ➤ عنوان الجامعة */}
             <div className="d-flex align-items-center gap-3 mb-4">
               <img
-                src="https://via.placeholder.com/80x80?text=UNI"
+                src={data.logo || "https://via.placeholder.com/80x80?text=UNI"}
                 alt="Üniversite"
                 className="university-image"
               />

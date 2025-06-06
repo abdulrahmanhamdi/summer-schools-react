@@ -1,0 +1,10 @@
+{
+  "bogazici": {
+    "id": "bogazici",
+    "name": "Boğaziçi Üniversitesi",
+    "city": "İstanbul",
+    "type": "Devlet",
+    "detail": "1 – 5 Temmuz 2025 tarihleri arasında yaz okulu düzenlenecektir.",
+    "logo": "https://upload.wikimedia.org/wikipedia/tr/thumb/5/5b/Bogazici_logo.svg/800px-Bogazici_logo.svg.png"
+  }
+}
