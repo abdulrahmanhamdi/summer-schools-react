@@ -139,9 +139,9 @@ Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
 
 ## 📬 İletişim
 
-- 📧 E-posta: [abdulrahman@example.com](mailto:abdulrahman@example.com)  
-- 🌐 Web Sitesi: [Yaz Okulu Platformu](https://yazokulu.example.com)  
-- 💬 GitHub Issues: [Sorun Bildir](https://github.com/username/summer-schools-react/issues)
+- 📧 E-posta: [abdulrahmanh524@gmail.com](mailto:abdulrahman@example.com)  
+- 🌐 Web Sitesi: [Yaz Okulu Platformu](soon)  
+
 
 ---
 
