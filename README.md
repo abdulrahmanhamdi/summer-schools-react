@@ -1,207 +1,151 @@
-🎓 Yaz Okulu Platformu
-Türkiye'deki üniversitelerin yaz okulu duyurularını tek bir yerde toplayan kullanıcı dostu bir platform.
+# 🎓 Yaz Okulu Platformu
 
-  
-  
-  
-  
+📍 **Türkiye'deki üniversitelerin yaz okulu duyurularını tek bir platformda toplayan kullanıcı dostu uygulama.**  
+Kolay erişim. Güvenli yönetim. Mobil uyumlu tasarım.
 
+---
 
+## 📌 Proje Özeti
 
-📋 Proje Hakkında
-Yaz Okulu Platformu, Türkiye'deki üniversitelerin yaz okulu duyurularını bir araya getirerek öğrencilerin bilgiye hızlı ve kolay bir şekilde ulaşmasını sağlayan modern bir web uygulamasıdır. Platform, kullanıcı dostu arayüzü ve mobil uyumlu tasarımı ile dikkat çekerken, admin paneli sayesinde veri yönetimi süreçlerini kolaylaştırır. Öğrenciler, yaz okulu programlarını inceleyebilir, iletişim formu aracılığıyla geri bildirimde bulunabilir ve platformun sunduğu karanlık/aydınlık mod seçenekleriyle kişiselleştirilmiş bir deneyim yaşayabilir.
-✨ Temel Amaçlar
+**Yaz Okulu Platformu**, Türkiye genelindeki üniversitelerin yaz okulu programlarını tek çatı altında toplayarak öğrencilerin güncel ve doğru bilgilere hızlıca ulaşmasını hedefleyen modern bir web uygulamasıdır.  
+Kullanıcı odaklı tasarımı, mobil cihazlara uyumlu arayüzü ve güvenli admin paneliyle öğrenci ve yöneticilere kusursuz bir deneyim sunar.
 
-🏫 Üniversite yaz okulu duyurularını merkezi bir yerde toplamak.
-📖 Öğrencilerin bilgiye hızlı ve kolay erişimini sağlamak.
-🛠️ Adminler için pratik bir veri yönetim sistemi sunmak.
-📱 Tüm cihazlarda kusursuz bir kullanıcı deneyimi sağlamak.
+---
 
+## 🎯 Temel Hedefler
 
-🚀 Özellikler
+- 🏫 Yaz okulu duyurularını merkezi olarak sunmak  
+- 🚀 Bilgiye hızlı, kolay ve filtrelenebilir erişim sağlamak  
+- 🔐 Güvenli ve esnek bir yönetim paneli sunmak  
+- 📱 Tüm cihazlarda optimize edilmiş kullanıcı deneyimi sağlamak
 
-📚 Yaz Okulu VeritabanıTürkiye’deki üniversitelerin yaz okulu programlarını içeren kapsamlı bir veritabanı. Her üniversite için detaylı bilgiler, şehir, tür ve ders koşulları gibi veriler sunar.
+---
 
-🧠 Admin PaneliAdminler, üniversite verilerini kolayca ekleyebilir, düzenleyebilir ve silebilir. Şifreli giriş sistemi ile güvenli bir yönetim sağlar.
+## 🌟 Öne Çıkan Özellikler
 
-🌙 Karanlık/Aydınlık ModKullanıcılar, tercihlerine göre karanlık veya aydınlık mod arasında geçiş yapabilir, böylece göz yorgunluğunu azaltır.
+| Özellik                    | Açıklama |
+|----------------------------|----------|
+| 📚 **Yaz Okulu Veritabanı** | Üniversitelere ait şehir, tür, ders koşulları gibi detaylı bilgiler içerir. |
+| 🧑‍💼 **Admin Paneli**         | Verileri ekleme, güncelleme ve silme imkanı. Şifreli giriş ile korunur. |
+| 🌙 **Karanlık / Aydınlık Mod** | Kullanıcı tercihlerine göre mod geçişi yapılabilir. |
+| 💬 **İletişim Formu**        | EmailJS ile doğrudan e-posta üzerinden geri bildirim alma imkanı. |
+| 🔍 **Arama ve Filtreleme**   | Metin bazlı arama ve vurgulama özelliği. |
+| 📅 **Güncel Bilgiler**        | Veriler düzenli olarak güncellenir, son güncelleme tarihi görünür. |
+| 📱 **Mobil Uyum**            | Telefon, tablet ve masaüstü için tamamen responsive yapı. |
 
-💌 İletişim FormuEmailJS entegrasyonu ile kullanıcılar doğrudan platform üzerinden geri bildirim, öneri veya hata bildirimi gönderebilir.
+---
 
-📱 Mobil Uyumlu TasarımTüm cihazlarda (telefon, tablet, masaüstü) sorunsuz çalışan responsive bir tasarım.
+## 🛠️ Kullanılan Teknolojiler
 
-🔐 Şifreli Giriş SistemiAdminler için güvenli bir giriş sistemi ile yetkisiz erişim engellenir.
+| Katman     | Teknolojiler |
+|------------|---------------|
+| 🎨 Frontend | React + Vite + Bootstrap Icons |
+| 🧠 Backend  | Node.js (Express.js) |
+| 🗂️ Veritabanı | JSON Tabanlı Geçici API |
+| ✉️ E-posta  | EmailJS |
+| 🌐 Dağıtım  | Vercel (Frontend) + Render (Backend) |
 
-🔍 Arama ve FiltrelemeÜniversite detaylarında metin arama ve vurgulama özelliği ile kullanıcılar aradıkları bilgiye hızlıca ulaşabilir.
+---
 
-📅 Güncel BilgilerÜniversite bilgileri düzenli olarak güncellenir ve son güncelleme tarihi kullanıcılara gösterilir.
+## ⚙️ Kurulum Adımları
 
+### 1️⃣ Gereksinimler
 
+- Node.js v16+
+- npm veya yarn
+- İnternet bağlantısı (EmailJS ve bağımlılıklar için)
 
-🛠️ Kullanılan Teknolojiler
+### 2️⃣ Frontend Kurulumu
 
-
-
-Katman
-Teknoloji
-
-
-
-Frontend
-⚛️ React + Vite + Bootstrap Icons
-
-
-Backend
-🟢 Express.js (Node.js)
-
-
-Veritabanı
-📄 JSON Tabanlı Geçici API
-
-
-E-posta
-📧 EmailJS
-
-
-Dağıtım
-🌐 Vercel (Frontend) + Render (Backend)
-
-
-📦 Bağımlılıklar
-
-Frontend:
-React Router: Sayfalar arası gezinme için.
-Bootstrap Icons: Modern ve hafif ikonlar için.
-Vite: Hızlı geliştirme ve build aracı.
-
-
-Backend:
-Express.js: API ve sunucu yönetimi için.
-JSON: Hafif ve geçici veri saklama.
-
-
-Entegrasyonlar:
-EmailJS: İletişim formu için e-posta gönderimi.
-
-
-
-
-📥 Kurulum ve Çalıştırma
-Aşağıdaki adımları takip ederek projeyi yerel ortamınızda çalıştırabilirsiniz.
-📋 Ön Koşullar
-
-🟢 Node.js (v16 veya üstü) yüklü olmalı.
-📦 npm veya yarn paket yöneticisi.
-🌐 İnternet bağlantısı (EmailJS ve bağımlılıklar için).
-
-1️⃣ Frontend Kurulumu
-Frontend uygulamasını çalıştırmak için aşağıdaki adımları izleyin:
-# Frontend klasörüne geçiş yapın
+```bash
 cd summer-schools-react
-
-# Bağımlılıkları yükleyin
 npm install
-
-# Geliştirme modunda çalıştırın
 npm run dev
+```
 
+📍 Uygulama: [http://localhost:5173](http://localhost:5173)
 
-Uygulama varsayılan olarak http://localhost:5173 adresinde çalışacaktır.
+### 3️⃣ Backend Kurulumu
 
-2️⃣ Backend Kurulumu
-Backend API’sini çalıştırmak için aşağıdaki adımları izleyin:
-# Backend klasörüne geçiş yapın
+```bash
 cd backend
-
-# Bağımlılıkları yükleyin
 npm install
-
-# Sunucuyu geliştirme modunda çalıştırın
 npm run dev
+```
 
+📍 API: [http://localhost:3000](http://localhost:3000)  
+📁 Veriler `backend/data` klasöründe saklanır.
 
-Backend varsayılan olarak http://localhost:3000 adresinde çalışacaktır.
-Not: Backend API’si, JSON tabanlı bir veritabanı kullanır. Veriler backend/data dizininde saklanır.
+---
 
-3️⃣ Ortam Değişkenleri
+## 🔐 Ortam Değişkenleri
 
-Frontend: EmailJS entegrasyonu için src/config.js dosyasında aşağıdaki değişkenleri ayarlayın:export const EMAILJS_SERVICE_ID = "your_service_id";
+**Frontend (`src/config.js`):**
+```js
+export const EMAILJS_SERVICE_ID = "your_service_id";
 export const EMAILJS_TEMPLATE_ID = "your_template_id";
 export const EMAILJS_PUBLIC_KEY = "your_public_key";
+```
 
-
-Backend: API için ortam değişkenlerini .env dosyasında tanımlayın:PORT=3000
+**Backend (`.env`):**
+```env
+PORT=3000
 API_TOKEN=your_api_token
+```
 
+---
 
+## 🖥️ Kullanım Rehberi
 
+- **Ana Sayfa:** Genel bilgilere hızlı erişim.
+- **Üniversite Listesi:** Filtreleme ve detay sayfaları.
+- **Admin Paneli:** /dashboard üzerinden giriş yaparak üniversite yönetimi.
+- **İletişim:** /contact sayfası üzerinden EmailJS ile mesaj gönderimi.
 
-🖥️ Kullanım Kılavuzu
-1️⃣ Ana Sayfa
+---
 
-Türkiye’deki yaz okulları hakkında genel bilgi alın.
-“Tüm Üniversiteleri Gör” butonuna tıklayarak üniversite listesine erişin.
+## 🤝 Katkıda Bulunmak
 
-2️⃣ Üniversite Listesi
+Bu projeye katkıda bulunmak ister misiniz? Aşağıdaki adımları takip ederek kolayca katkı sağlayabilirsiniz:
 
-Üniversiteleri şehir, tür ve detaylarına göre filtreleyin.
-Detay sayfasına giderek yaz okulu programları hakkında daha fazla bilgi edinin.
-
-3️⃣ Admin Paneli
-
-/dashboard yoluna giderek admin paneline erişin.
-Şifreli giriş yaparak üniversite ekleyebilir, düzenleyebilir veya silebilirsiniz.
-
-4️⃣ İletişim
-
-/contact sayfasından iletişim formunu kullanarak geri bildirimde bulunun.
-Gönderilen mesajlar EmailJS aracılığıyla doğrudan adminin e-posta adresine iletilir.
-
-
-🌟 Katkıda Bulunma
-Bu proje açık kaynaklı bir projedir ve katkılarınızı bekliyoruz! Aşağıdaki adımları takip ederek katkıda bulunabilirsiniz.
-
-Fork YapınDepoyu kendi hesabınıza fork edin.
-
-Klonlayın  
+```bash
+# 1. Forklayın
+# 2. Klonlayın
 git clone https://github.com/your-username/summer-schools-react.git
 
-
-Yeni Bir Dal Oluşturun  
+# 3. Yeni bir dal oluşturun
 git checkout -b feature/your-feature-name
 
-
-Değişikliklerinizi YapınKodunuzu düzenleyin ve gerekli değişiklikleri yapın.
-
-Değişiklikleri Commit Edin  
+# 4. Geliştirin, commit edin
 git add .
-git commit -m "feat: add your feature description"
+git commit -m "feat: your feature description"
 
-
-Push Yapın  
+# 5. Push & Pull Request
 git push origin feature/your-feature-name
+```
 
+### ✅ Katkı Kuralları
+- Temiz ve okunabilir kod
+- Açıklayıcı commit mesajları
+- Mümkünse test eklemeleri
 
-Pull Request AçınAna depoya bir pull request gönderin. Değişiklikleriniz incelenecek ve uygun görülürse birleştirilecektir.
+---
 
+## 📄 Lisans
 
-📜 Katkı Kuralları
+Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
 
-Kodunuzu temiz ve okunabilir tutun.
-Her commit mesajı açıklayıcı olmalı.
-Yeni özellikler için testler eklemeye çalışın.
+---
 
+## 📬 İletişim
 
-📄 Lisans
-Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına göz atabilirsiniz.
+- 📧 E-posta: [abdulrahman@example.com](mailto:abdulrahman@example.com)  
+- 🌐 Web Sitesi: [Yaz Okulu Platformu](https://yazokulu.example.com)  
+- 💬 GitHub Issues: [Sorun Bildir](https://github.com/username/summer-schools-react/issues)
 
-📬 İletişim
-Sorularınız veya önerileriniz için bizimle iletişime geçebilirsiniz:
+---
 
-📧 E-posta: abdulrahman@example.com  
-🌐 Web Sitesi: Yaz Okulu Platformu  
-💬 GitHub Issues: Sorun Bildir
+## 🙌 Teşekkürler
 
-
-🙌 Teşekkürler
-Bu projeyi geliştirirken destek veren herkese teşekkür ederiz! 🚀Projemizi kullanarak yaz okulu süreçlerini kolaylaştırmanız dileğiyle. 🎓
+Bu projeye katkı sağlayan herkese sonsuz teşekkürler!  
+📚 Öğrencilerin yaz okulu programlarına daha kolay ulaşması için birlikte daha iyisini inşa edelim!
